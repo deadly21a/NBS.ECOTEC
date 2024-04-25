@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="materias.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Materias Intensivo 2</title>
+    <title>Registro de Materias Semestre 1</title>
     <script src="util.js"></script>
 </head>
 <header>
@@ -27,18 +27,33 @@
 <body>
     <div class="container">
         <div class="course" id="course1">
-            <h2>Materia: Mediación y Resolución de Conflictos</h2>
+            <h2>Materia: Derecho Civil Obligaciones 2 </h2>
             <p>Campus: Samborondón</p>
             <p>Curso: D-203</p>
-            <p>Horario: 9:00 am - 11:00 am</p>
-            <button class="button" onclick="registerCourse('course1', 'Mediación y Resolución de Conflictos', 'Samborondón', 'D-203', '9:00 am - 11:00 am')">Cursando</button>
+            <p>Horario:martes y jueves de 6:15  PM a 7:45 PM</p>
+            <button class="button" onclick="registerCourse('course1', 'Derecho Civil Obligaciones 2', 'Samborondón', 'D-203', 'martes y jueves de 6:15  PM a 7:45 PM')">Cursando</button>
         </div>
         <div class="course" id="course2">
-            <h2>Materia: Derecho Mercantil</h2>
+            <h2>Materia: Procedimiento civil 1</h2>
             <p>Campus: Samborondón</p>
             <p>Curso: C-306</p>
-            <p>Horario: 11:20 am - 1:00 pm</p>
-            <button class="button" onclick="registerCourse('course2', 'Derecho Mercantil', 'Samborondón', 'C-306', '11:20 am - 1:00 pm')">Cursando</button>
+            <p>Horario: Lunes y Miercoles de 6:15  PM a 7:45 PM</p>
+            <button class="button" onclick="registerCourse('course2', 'Procedimiento civil 1', 'Samborondón', 'C-306', ' Lunes y Miercoles de 6:15  PM a 7:45 PM')">Cursando</button>
+        </div>
+                <div class="course" id="course3">
+            <h2>Materia: Derecho penal económico1</h2>
+            <p>Campus: Samborondón</p>
+            <p>Curso: C-306</p>
+            <p>Horario: Viernes de 6:15  PM a 7:45 PM</p>
+            <button class="button" onclick="registerCourse('course3', 'Derecho penal económico', 'Samborondón', 'C-306', '  Viernes de 6:15  PM a 7:45 PM')">Cursando</button>
+        </div>
+          </div>
+                <div class="course" id="course4">
+            <h2>Materia: Servicios comunitarios</h2>
+            <p>Campus: Samborondón</p>
+            <p>Curso: C-306</p>
+            <p>Horario: martes y jueves de 8:00  PM a 9:00 PM</p>
+            <button class="button" onclick="registerCourse('course4', 'Servicios comunitario', 'Samborondón', 'C-306', '  martes y jueves de 8:00  PM a 9:00 PM')">Cursando</button>
         </div>
     </div>
 
@@ -46,7 +61,7 @@
         function registerCourse(courseId, courseName, campus, courseCode, schedule) {
             var courses = JSON.parse(localStorage.getItem('registeredCourses')) || [];
             
-            if (courses.length >= 2) {
+            if (courses.length >= 4) {
                 alert('Ya has registrado el máximo de materias permitidas.');
                 return;
             }
